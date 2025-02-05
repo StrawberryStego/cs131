@@ -1,185 +1,37 @@
-/home/jimmy_nguyen05
+# COMMAND: echo $HOME
+/home/jimmy_nguyen05 
+
+# COMMAND: id
 uid=1001(jimmy_nguyen05) gid=1002(jimmy_nguyen05) groups=1002(jimmy_nguyen05),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),118(netdev),119(lxd),1000(ubuntu),1001(google-sudoers)
-1
-10
-100
-101
-102
-105
-106
-107
-11
-116
-119
-12
-120
-127
-128
-129
-13
-130
-14
-1422
-1427
-15
-16
-169
-18
-1812
-1821
-19
-190
-2
-20
-206
-21
-22
-227
-24
-25
-26
-27
-28
-29
-3
-30
-31
-32
-322
-323
-324
-325
-326
-33
-34
-4
-443
-446
-479
-483
-488
-494
-495
-5
-506
-516
-530
-541
-550
-553
-557
-576
-588
-6
-624
-746
-755
-760
-776
-779
-780
-8
-80
-81
-82
-83
-84
-85
-86
-87
-88
-9
-90
-92
-93
-930
-936
-95
-96
-97
-98
-99
-acpi
-bootconfig
-buddyinfo
-bus
-cgroups
-cmdline
-consoles
-cpuinfo
+
+# COMMAND: ls /proc (Simplified to reduce clutter)
+...
+cpuinfo # Info about CPU here.
 crypto
-devices
-diskstats
-dma
-driver
-dynamic_debug
-execdomains
-fb
-filesystems
-fs
-interrupts
-iomem
-ioports
-irq
-kallsyms
-kcore
-key-users
-keys
-kmsg
-kpagecgroup
-kpagecount
-kpageflags
-loadavg
-locks
-mdstat
-meminfo
+...
+meminfo # Info about memory here.
 misc
-modules
-mounts
-mtrr
-net
-pagetypeinfo
-partitions
-pressure
-schedstat
-scsi
-self
-slabinfo
-softirqs
-stat
-swaps
-sys
-sysrq-trigger
-sysvipc
-thread-self
-timer_list
-tty
-uptime
-version
-version_signature
-vmallocinfo
-vmstat
-zoneinfo
+...
+
+# COMMAND: head /proc/meminfo
 MemTotal:         976892 kB
 MemFree:          172736 kB
 MemAvailable:     612872 kB
-Buffers:           13944 kB
-Cached:           544680 kB
-SwapCached:            0 kB
-Active:           315564 kB
-Inactive:         301804 kB
-Active(anon):        884 kB
-Inactive(anon):    67020 kB
-processor	: 0
+...
+
+# COMMAND: head /proc/cpuinfo
+processor	: 0 # Actually has one processor, just starts at zero.
 vendor_id	: GenuineIntel
 cpu family	: 6
 model		: 79
-model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz # Processor name + speed.
 stepping	: 0
 microcode	: 0xffffffff
 cpu MHz		: 2199.998
 cache size	: 56320 KB
 physical id	: 0
+
+# COMMAND: tail /proc/cpuinfo
 cpuid level	: 13
 wp		: yes
 flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
@@ -190,11 +42,12 @@ cache_alignment	: 64
 address sizes	: 46 bits physical, 48 bits virtual
 power management:
 
-processor	: 0
+# COMMAND: cat /proc/cpuinfo
+processor	: 0 # Indicates that there is one processor.
 vendor_id	: GenuineIntel
 cpu family	: 6
 model		: 79
-model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz # Processor name + speed.
 stepping	: 0
 microcode	: 0xffffffff
 cpu MHz		: 2199.998
@@ -216,35 +69,10 @@ clflush size	: 64
 cache_alignment	: 64
 address sizes	: 46 bits physical, 48 bits virtual
 power management:
+... (Duplicate of the above -- Just for the 2nd virtual core).
 
-processor	: 1
-vendor_id	: GenuineIntel
-cpu family	: 6
-model		: 79
-model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
-stepping	: 0
-microcode	: 0xffffffff
-cpu MHz		: 2199.998
-cache size	: 56320 KB
-physical id	: 0
-siblings	: 2
-core id		: 0
-cpu cores	: 1
-apicid		: 1
-initial apicid	: 1
-fpu		: yes
-fpu_exception	: yes
-cpuid level	: 13
-wp		: yes
-flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
-bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa mmio_stale_data retbleed bhi
-bogomips	: 4399.99
-clflush size	: 64
-cache_alignment	: 64
-address sizes	: 46 bits physical, 48 bits virtual
-power management:
-
+# COMMAND: cat /etc/lsb-release
 DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=20.04
+DISTRIB_RELEASE=20.04 # OS Version Number.
 DISTRIB_CODENAME=focal
 DISTRIB_DESCRIPTION="Ubuntu 20.04.6 LTS"
