@@ -1,10 +1,10 @@
-# COMMAND: echo $HOME
+# [Question 2] COMMAND: echo $HOME
 /home/jimmy_nguyen05 
 
-# COMMAND: id
+# [Question 3] COMMAND: id
 uid=1001(jimmy_nguyen05) gid=1002(jimmy_nguyen05) groups=1002(jimmy_nguyen05),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),118(netdev),119(lxd),1000(ubuntu),1001(google-sudoers)
 
-# COMMAND: ls /proc (Simplified to reduce clutter)
+# [Question 4] COMMAND: ls /proc (Simplified to reduce clutter)
 ...
 cpuinfo # Info about CPU here.
 crypto
@@ -13,13 +13,13 @@ meminfo # Info about memory here.
 misc
 ...
 
-# COMMAND: head /proc/meminfo
+# [Question 5] COMMAND: head /proc/meminfo
 MemTotal:         976892 kB
 MemFree:          172736 kB
 MemAvailable:     612872 kB
 ...
 
-# COMMAND: head /proc/cpuinfo
+# [Question 6] COMMAND: head /proc/cpuinfo
 processor	: 0 # Actually has one processor, just starts at zero.
 vendor_id	: GenuineIntel
 cpu family	: 6
@@ -71,7 +71,7 @@ address sizes	: 46 bits physical, 48 bits virtual
 power management:
 ... (Duplicate of the above -- Just for the 2nd virtual core).
 
-# COMMAND: cat /etc/lsb-release
+# [Question 7] COMMAND: cat /etc/lsb-release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=20.04 # OS Version Number.
 DISTRIB_CODENAME=focal
