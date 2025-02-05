@@ -1,11 +1,11 @@
     1  mkdir ws2
     2  cd ws2
-    3  echo $HOME > ws2.txt
-    4  id > ws2.txt
-    5  ls /proc > ws2.txt
-    6  head /proc/meminfo > ws2.txt
-    7  head /proc/cpuinfo > ws2.txt
-    8  tail /proc/cpuinfo > ws2.txt
-    9  cat /proc/cpuinfo > ws2.txt
-   10  cat /etc/lsb-release > ws2.txt
-   11  history > cmds.log
+    3  echo $HOME >> ws2.txt
+    4  id >> ws2.txt
+    5  ls /proc >> ws2.txt
+    6  head /proc/meminfo >> ws2.txt
+    7  head /proc/cpuinfo >> ws2.txt
+    8  tail /proc/cpuinfo >> ws2.txt
+    9  cat /proc/cpuinfo >> ws2.txt
+   10  cat /etc/lsb-release >> ws2.txt
+   11  history >> cmds.log
