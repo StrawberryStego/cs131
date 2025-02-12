@@ -1,0 +1,5 @@
+       # Task 1
+    1  grep "2019-01-02" 2019-01-h1.csv | cut --delimiter="," -f8 | uniq -c | sort -nr | head -3 > ws3.txt
+
+       # Task 2
+    2  grep "2019-01-10" 2019-01-h1.csv | cut --delimiter="," -f8 | uniq -c | sort -nr | head -3 >> ws3.txt
