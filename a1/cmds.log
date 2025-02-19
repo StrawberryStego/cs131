@@ -1,4 +1,5 @@
     #  Task 1: Edit .bashrc & refresh settings.
+    #  Added: alias l="ls -ltr" & alias w="ls -l | wc" to the end of .bashrc.
     1  nano ~/.bashrc
     2  source ~/.bashrc
     
