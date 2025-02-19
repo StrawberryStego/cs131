@@ -1,0 +1,8 @@
+# Note, command done before Task 2 was started.
+
+# 1a) Command: "l" = "ls -ltr"
+total 0
+-rw-rw-r-- 1 jimmy_nguyen05 jimmy_nguyen05 0 Feb 19 06:51 a1_task_1.txt
+
+# 1b) Command "w" = "ls -l | wc"
+3      20     154

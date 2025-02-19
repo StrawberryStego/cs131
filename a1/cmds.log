@@ -1,0 +1,33 @@
+    #  Task 1: Edit .bashrc & refresh settings.
+    1  nano ~/.bashrc
+    2  source ~/.bashrc
+    
+    #  Task 1: Execute alias commands and store results in a1_task_1.txt.
+    3  l > a1_task_1.txt
+    4  w >> a1_task_1.txt
+    5  history > cmds.log
+
+    #  Task 2a: Create FARE directory. 
+    1  mkdir FARE
+    2  cd FARE
+
+    #  Task 2b: Redirect the fare amount for two pairs of PU & DO locations to respective files.
+    3  grep ",107.0,107.0," 2019-01-h1.csv | cut -d, -f11 > 107.0-107.0.txt
+    4  grep ",116.0,42.0," 2019-01-h1.csv | cut -d, -f11 > 116.0-42.0.txt
+
+    #  Task 2c: Compute the mean of fare amounts from the files of 2b).
+    5  sum=$(paste -sd+ 107.0-107.0.txt | bc)
+    6  count=$(wc -l < 107.0-107.0.txt)
+    7  mean=$(echo "scale=2; $sum / $count" | bc)
+    8  echo "Mean fare for 107.0-107.0: $mean" > a1.txt
+
+    9  sum=$(paste -sd+ 116.0-42.0.txt | bc)
+   10  count=$(wc -l < 116.0-42.0.txt)
+   11  mean=$(echo "scale=2; $sum / $count" | bc)
+   12  echo "Mean fare for 116.0-42.0: $mean" >> a1.txt
+
+    #  Task 2d: Highest total amount paid by customers picked up on 01-10-2019.
+   13  grep "2019-01-10" 2019-01-h1.csv | cut -d, -f17 | sort -n | tail -1 >> a1.txt
+ 
+    #  Task 2e: 10 most popular DO locations for 3+ people rides w/ amounts.
+   14  cut -d, -f4,9 2019-01-h1.csv | grep -v "passenger_count" | grep -E '^(3\.0|4\.0|5\.0|6\.0|7\.0|8\.0)' | cut -d, -f2 | sort | uniq -c | sort -nr | head -10 >> a1.txt 

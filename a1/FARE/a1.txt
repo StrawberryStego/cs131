@@ -1,0 +1,18 @@
+# Task 2c: Mean average of 107.0-107.0.txt & 116.0-42.0.
+Mean fare for 107.0-107.0: 6.08
+Mean fare for 116.0-42.0: 7.17
+
+# Task 2d: Highest total amount paid by customers picked up on 01-10-2019.
+36090.3
+
+# Task 2e: Among 3+ people rides, these are the 10 most popular dropoff locations w/ amounts.
+  19897 236.0
+  18013 161.0
+  16686 237.0
+  16556 230.0
+  14324 170.0
+  13964 48.0
+  13902 162.0
+  13472 142.0
+  12852 239.0
+  12194 141.0
