@@ -12,7 +12,7 @@ Batch-rename files in the SXXEXX format, i.e., S01E05.
 but for unorganized filenames like A.mp4, it can be useful to input a seasonNumber.
 
 ## Installation
-Simply grab tv_renamer.sh and run using bash.
+Download tv_renamer.sh. Make sure the script is executable, i.e., chmod 777 tv_renamer.sh. Run using bash.
 
 ## Examples
 >`/Chernobyl (Season 1)/`
