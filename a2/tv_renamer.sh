@@ -16,27 +16,28 @@ counter=1
 # Loop through all items in the directory.
 for file in "$folder"/*; do
     # Skip if not a regular file.
-    [ -f "$f" ] || continue
+    [ -f "$file" ] || continue
 
     # Grab the extension.
-    ext="${f##*.}"
+    ext="${file##*.}"
 
     # Check for SxxExx format in the filename.
-    if [[ "$f" =~ (S[0-9]{2}E[0-9]{2,3}) ]]; then
+    if [[ "$file" =~ (S[0-9]{2}E[0-9]{2,3}) ]]; then
         newName="${BASH_REMATCH[1]}.$ext"
     else
         newName="${seasonString}E$(printf '%02d' "$counter").$ext"
     fi
 
     # Show operation and prompt for confirmation.
-    echo "$f -> $newName"
+    echo "$file -> $newName"
     read -p "Confirm rename? (y/n) " choice
     if [[ "$choice" == [Yy]* ]]; then
-        mv "$f" "$folder/$newName"
+        mv "$file" "$folder/$newName"
         ((counter++))
     else
-        echo "Skipping rename for $f"
+        echo "Skipping rename for $file"
     fi
 done
 
+echo ""
 echo "Finished!"
