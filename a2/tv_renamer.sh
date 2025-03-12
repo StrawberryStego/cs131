@@ -48,11 +48,13 @@ for file in "$folder"/*; do
     read -p "Confirm rename? (y/n) " choice
     if [[ "$choice" == [Yy]* ]]; then
         mv "$file" "$folder/$newName"
-        ((counter++))
         ((renamedCount++))
     else
         echo "Skipping rename for $file"
     fi
+
+    # Should be incremented regardless of whether a file is renamed or not (For QoF purposes).
+    ((counter++))
 done
 
 newTotal=$((previousCount + renamedCount))
