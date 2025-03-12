@@ -1,4 +1,4 @@
-# Open Source FileBot
+# Open Source FileBot 🗃️
 This is a primitive shell-script to semi-replicate [Filebot's](https://www.filebot.net/) behavior.
 
 ## Function
