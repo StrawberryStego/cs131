@@ -15,7 +15,7 @@ but for unorganized filenames like A.mp4, it can be useful to input a seasonNumb
 Simply grab tv_renamer.sh and run using bash.
 
 ## Examples
-`/Chernobyl (Season 1)/`
+>`/Chernobyl (Season 1)/`
    <br>&nbsp;&nbsp;&nbsp;&nbsp;`Chernobyl.S01E01.1.23.45.2160p.DTS-HD.MA.5.1.DV.HEVC.REMUX-FraMeSToR.mkv`
    <br>&nbsp;&nbsp;&nbsp;&nbsp;`Chernobyl.S01E02.Please.Remain.Calm.2160p.DTS-HD.MA.5.1.DV.HEVC.REMUX-FraMeSToR.mkv`
    <br>&nbsp;&nbsp;&nbsp;&nbsp;`Chernobyl.S01E03.Open.Wide.O.Earth.2160p.DTS-HD.MA.5.1.DV.HEVC.REMUX-FraMeSToR.mkv`
@@ -34,7 +34,7 @@ Simply grab tv_renamer.sh and run using bash.
 
 ---	
 
-`/SomeUnorganizedSeason3Episodes/`
+>`/SomeUnorganizedSeason3Episodes/`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;`A.mov`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;`B.mov`
 <br>&nbsp;&nbsp;&nbsp;&nbsp;`C.mov`
