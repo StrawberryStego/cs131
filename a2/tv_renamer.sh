@@ -13,6 +13,21 @@ seasonString=$(printf "S%02d" "$seasonNumber")
 # Counter for if files don't match SxxExx format.
 counter=1
 
+# Used to keep track of the number of renamed files in current run.
+renamedCount=0
+
+saveDir="$HOME/.local/share/tv_renamer"
+mkdir -p "$saveDir"
+countFile="$saveDir/numOfRenamedFiles.txt"
+
+# Read the previous count from the saveFile. Ignore FileNotFound errors and default to zero.
+previousCount=$(cat "$countFile" 2>/dev/null || echo "0")
+
+# Create count file if missing.
+if [ ! -f "$countFile" ]; then
+    echo "0" > "$countFile"
+fi
+
 # Loop through all items in the directory.
 for file in "$folder"/*; do
     # Skip if not a regular file.
@@ -34,10 +49,14 @@ for file in "$folder"/*; do
     if [[ "$choice" == [Yy]* ]]; then
         mv "$file" "$folder/$newName"
         ((counter++))
+        ((renamedCount++))
     else
         echo "Skipping rename for $file"
     fi
 done
 
+newTotal=$((previousCount + renamedCount))
+echo "$newTotal" > "$countFile"
+
 echo ""
-echo "Finished!"
+echo "You have renamed $newTotal files using this tool!"
