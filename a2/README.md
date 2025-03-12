@@ -3,7 +3,8 @@ This is a primitive shell-script to semi-replicate [Filebot's](https://www.fileb
 
 ## Function
 Batch-rename files in the SXXEXX format, i.e., S01E05. 
-<br>This is useful for batch renaming TV show episodes, and works with all media files.
+<br> For unorganized filenames, e.g., FirstEpisode.mp4, the script will default to S01EXX.mp4.
+<br><br>This is useful for batch renaming TV show episodes, and works with all media files.
 <br><br>You'll also get confirmation prompts before FileBot does *anything* to reduce irregular errors!
 
 ## Parameters
