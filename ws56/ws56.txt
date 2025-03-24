@@ -2780,6 +2780,9 @@ tip_amount 1
 1.74 16
 5.33 165
 1.33 1116
+
+# Task 2.2 #
+# Result of "awk -F, '{tip_amount[$14]++} END {for (tip in tip_amount) print tip, tip_amount[tip]}' 2019-01-h1.csv | sort -k2 -nr | head -20 >> ws56.txt"
 0.0 1197606
 1.0 206290
 2.0 98155
