@@ -27,6 +27,9 @@ vendorid,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distanc
 2,20181128 162937,20181128 163343,5,0,2,N,193,193,2,52,0,0,0,0,0,55,
 1,20190101 002128,20190101 002837,1,1,1,N,163,229,1,6,0,0,1,0,0,9,
 1,20190101 003201,20190101 004539,1,3,1,N,229,7,1,13,0,0,3,0,0,18,
+
+# Task 2.1 #
+# Result of "awk -F, '$17 >= 10 {tip_amount[$14]++} END {for (tip in tip_amount) print tip, tip_amount[tip]}' 2019-01-h1.csv"
 9.34 2
 22.5 7
 9.75 189
