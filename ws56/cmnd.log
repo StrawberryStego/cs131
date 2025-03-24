@@ -14,3 +14,6 @@
 
 # Task 2.1
 1 awk -F, '$17 >= 10 {tip_amount[$14]++} END {for (tip in tip_amount) print tip, tip_amount[tip]}' 2019-01-h1.csv >> ws56.txt 
+   11  awk -F, '{tip_amount[$14]++} END {for (tip in tip_amount) print tip, tip_amount[tip]}' 2019-01-h1.csv | sort -k2,2nr -k1,1n | head -20 >> ws56.txt
+   17  awk -F, '{tip_amount[$14]++} END {for (tip in tip_amount) print tip, tip_amount[tip]}' 2019-01-h1.csv | sort -k2 -nr | head -20 >> ws56.txt
+   27  history | grep -i "awk -F," >> cmnd.log 
