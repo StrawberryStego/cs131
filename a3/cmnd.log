@@ -2,57 +2,6 @@
     2  cd a3
     3  nano grades.csv
     4  nano grader.awk
-    5  man awk
-    6  ls
-    7  grader.awk
-    8  ./grader.awk
-    9  chmod 777 ./grader.awk
-   10  ./grader.awk
-   11  echo "Hi" | ./grader.awk
-   12  nano ./grader.awk
-   13  ./grader.awk grades.csv 
-   14  nano ./grader.awk
-   15  cd ~
-   16  ls -a
-   17  cd ..
-   18  ls -a
-   19  cd ..
-   20  ls -a
-   21  cd bin
-   22  ls
-   23  cd awk
-   24  ls
-   25  awk
-   26  cd ..
-   27  cd 
-   28  cd ~
-   29  ls
-   30  cd cs131/
-   31  ls
-   32  cd a3
-   33  ls
-   34  nano ./grader.awk
-   35  cat ./grader.awk
-   36  nano ./grader.awk
-   37  ./grader.awk grades.csv 
-   38  nano ./grader.awk
-   39  ./grader.awk grades.csv 
-   40  nano ./grader.awk
-   41  ./grader.awk grades.csv 
-   42  grader.awk grades.csv 
-   43  nano ./grader.awk
-   44  ./grader.awk grades.csv 
-   45  nano ./grader.awk
-   46  ./grader.awk grades.csv 
-   47  nano ./grader.awk
-   48  ./grader.awk grades.csv 
-   49  nano ./grader.awk
-   50  ./grader.awk grades.csv 
-   51  nano ./grader.awk
-   52  ./grader.awk grades.csv 
-   53  nano ./grader.awk
-   54  ./grader.awk grades.csv 
-   55  nano ./grader.awk
-   56  ./grader.awk grades.csv 
-   57  ./grader.awk grades.csv > a3.txt
-   58  history > cmnd.log
+    5  chmod +x ./grader.awk
+    6  ./grader.awk grades.csv > a3.txt
+    7  history > cmnd.log
