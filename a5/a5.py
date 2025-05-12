@@ -12,9 +12,7 @@ iris = spark.read.csv(r"a5/iris.csv", schema=schema)
 
 # Load the data and set features.
 indexer = StringIndexer(inputCol="species", outputCol="label")
-assembler = VectorAssembler(
-    inputCols=features,
-    outputCol="features")
+assembler = VectorAssembler(inputCols=features, outputCol="features")
 
 # Make the pipeline and train the model.
 rf = RandomForestClassifier(numTrees=30, maxDepth=5)
